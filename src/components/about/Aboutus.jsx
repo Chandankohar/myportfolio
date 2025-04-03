@@ -12,20 +12,8 @@ import fastlearner from '../../static/image/fastlearner.jpg'
 import problemsolving from '../../static/image/problemsolving.webp'
 import teamwork from '../../static/image/teamwork.jpg'
 import timemanagement from '../../static/image/timemanagement.jpg'
-import { FaGraduationCap } from "react-icons/fa";
 
-const educationData = [
-  {
-    degree: "B.Tech in Computer Science",
-    institution: "Parul University",
-    year: "2021 - 2025",
-  },
-  {
-    degree: "High School +2",
-    institution: "MahaKavi Devkota Secondary School",
-    year: "2019 - 2021",
-  },
-];
+
 const About = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { triggerOnce: true, threshold: 1 });
@@ -53,27 +41,7 @@ const About = () => {
       <h2>About Me</h2>
       <p>I am a passionate developer with experience in React, Django, and more.</p>
 
-      <div className={styles.educationSection}>
-      <h2 className={styles.title}>🎓 Education</h2>
-      <div className={styles.educationList}>
-        {educationData.map((edu, index) => (
-          <motion.div
-            key={index}
-            className={styles.educationCard}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: index * 0.8 }}
-          >
-            <FaGraduationCap className={styles.icon} />
-            <div>
-              <h3>{edu.degree}</h3>
-              <p>{edu.institution}</p>
-              <span>{edu.year}</span>
-            </div>
-          </motion.div>
-        ))}
-      </div>
-      </div>
+     
       <div className={styles.skillsSection}>
       <motion.h2
       initial={{ opacity: 0, y: -50 }}

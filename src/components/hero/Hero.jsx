@@ -40,7 +40,7 @@ const Hero = () => {
       </motion.div>
 
       <motion.a
-        href="/projects"  // Change this to your actual projects page URL
+        href="https://drive.google.com/file/d/1ocDhsRwYQ6tL7Dz16e3fDBgrsTPcZRj3/view?usp=drive_link"  // Change this to your actual projects page URL
         className={styles.seeMoreBtn}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}

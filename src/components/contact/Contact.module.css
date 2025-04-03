@@ -2,7 +2,6 @@
     text-align: center;
     padding: 50px 20px;
     background-color: #424141a4;
-
 }
 
 .title {
@@ -16,6 +15,7 @@
     justify-content: center;
     align-items: center;
     gap: 30px;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
 }
 
 .contactItem {
@@ -41,4 +41,53 @@
 .icon {
     font-size: 1.5rem;
     color: #ff5733;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contactSection {
+        padding: 40px 15px;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .contactList {
+        gap: 20px;
+    }
+
+    .contactItem {
+        font-size: 1rem;
+        padding: 10px 18px;
+    }
+
+    .icon {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contactSection {
+        padding: 30px 10px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .contactList {
+        flex-direction: column; /* Stacks items vertically */
+        gap: 15px;
+    }
+
+    .contactItem {
+        width: 90%;
+        font-size: 0.95rem;
+        padding: 10px 15px;
+    }
+
+    .icon {
+        font-size: 1.2rem;
+    }
 }
