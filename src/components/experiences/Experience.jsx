@@ -1,11 +1,12 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import styles from "./Experience.module.css";
 import { FaBriefcase } from "react-icons/fa";
-
+import aarksoftcrm from '../../static/image/project/aarksoftcrm.png'
 const experiences = [
   {
     company: "Aarksoft Web Tec",
+    logo:aarksoftcrm,
     role: " Web Developer Intern",
     duration: "20 November 2024 - 20 March 2025",
     tech: "Django, SQL, CRM, ERP",
@@ -18,20 +19,23 @@ const experiences = [
 ];
 
 const Experience = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { triggerOnce: true, threshold: 1 });
   return (
-    <section className={styles.experienceSection}>
-      <h2 className={styles.title}>💼 Work Experience</h2>
+    <section ref={ref} className={styles.experienceSection}>
+      {isInView && ( <> <h2 className={styles.title}>💼 Work Experience</h2>
       <div className={styles.experienceList}>
         {experiences.map((exp, index) => (
           <motion.div
             key={index}
             className={styles.experienceCard}
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: -60 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
+            transition={{ duration: 2, delay: index * 0.4 }}
           >
             <FaBriefcase className={styles.icon} />
             <div>
+              <img src={exp.logo} alt={exp.company} />
               <h3>{exp.role} - <span>{exp.company}</span></h3>
               <p className={styles.duration}>{exp.duration}</p>
               <p className={styles.tech}><strong>Technologies:</strong> {exp.tech}</p>
@@ -44,6 +48,7 @@ const Experience = () => {
           </motion.div>
         ))}
       </div>
+      </>)}
     </section>
   );
 };

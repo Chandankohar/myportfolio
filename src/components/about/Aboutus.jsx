@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import styles from "./About.module.css";
-import { motion } from "framer-motion";
 import react from '../../static/image/react.jpg'
 import reactnative from '../../static/image/reactnative.webp'
 import django from '../../static/image/django.jpg'
@@ -27,6 +27,8 @@ const educationData = [
   },
 ];
 const About = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { triggerOnce: true, threshold: 1 });
     const skillsData = [
         {  img: react },
         {img: reactnative },
@@ -46,7 +48,8 @@ const About = () => {
       ];
 
   return (
-    <section id="about" className={styles.about}>
+    <section ref={ref} id="about" className={styles.about}>
+      {isInView && ( <> 
       <h2>About Me</h2>
       <p>I am a passionate developer with experience in React, Django, and more.</p>
 
@@ -59,7 +62,7 @@ const About = () => {
             className={styles.educationCard}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
+            transition={{ duration: 1, delay: index * 0.8 }}
           >
             <FaGraduationCap className={styles.icon} />
             <div>
@@ -93,7 +96,7 @@ const About = () => {
             className={styles.skill}
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
+            transition={{ duration: 1, delay: index * 0.4 }}
             whileHover={{ scale: 1.1 }}
           >
             <img src={skill.img} alt={skill.name} />
@@ -124,7 +127,7 @@ const About = () => {
             className={styles.skill}
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
+            transition={{ duration: 2, delay: index * 0.6 }}
             whileHover={{ scale: 1.1 }}
           >
             <img src={skill.img} alt={skill.name} />
@@ -133,7 +136,7 @@ const About = () => {
         ))}
       </div>
     </div>
-
+    </>)}
     </section>
   );
 };

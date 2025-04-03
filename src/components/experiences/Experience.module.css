@@ -13,10 +13,10 @@
 }
 @keyframes zoomEffect {
     0% {
-        background-size: 50%;
+        background-size: 54%;
     }
     100% {
-        background-size: 53%;
+        background-size: 55%;
     }
 }
 

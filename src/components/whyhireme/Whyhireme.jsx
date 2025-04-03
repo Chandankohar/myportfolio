@@ -1,5 +1,5 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import styles from "./WhyHireMe.module.css";
 import { FaCode, FaBrain, FaServer, FaUsers } from "react-icons/fa";
 
@@ -15,17 +15,20 @@ const skills = [
 ];
 
 const WhyHireMe = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { triggerOnce: true, threshold: 1 });
+
   return (
-    <section className={styles.whyHireMe}>
-      <h2 className={styles.title}>🤝 Why Hire Me?</h2>
+    <section ref={ref} className={styles.whyHireMe}>
+     {isInView && ( <>  <h2 className={styles.title}>🤝 Why Hire Me?</h2>
       <div className={styles.skillsGrid}>
         {skills.map((skill, index) => (
           <motion.div
             key={index}
             className={styles.skillCard}
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
+            transition={{ duration: 1, delay: index * 0.4 }}
             whileHover={{ scale: 1.1 }}
           >
             <motion.span animate={{ scale: [1, 1.3, 1] }}
@@ -35,6 +38,7 @@ const WhyHireMe = () => {
           </motion.div>
         ))}
       </div>
+      </>)}
     </section>
   );
 };
