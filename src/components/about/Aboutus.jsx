@@ -12,6 +12,10 @@ import fastlearner from '../../static/image/fastlearner.jpg'
 import problemsolving from '../../static/image/problemsolving.webp'
 import teamwork from '../../static/image/teamwork.jpg'
 import timemanagement from '../../static/image/timemanagement.jpg'
+import mongodb from '../../static/image/mongodb.jpg'
+import express from '../../static/image/express.jpg'
+import tailwind from '../../static/image/tailwind.webp'
+
 
 
 const About = () => {
@@ -19,7 +23,10 @@ const About = () => {
   const isInView = useInView(ref, { triggerOnce: true, threshold: 1 });
     const skillsData = [
         {  img: react },
+        {  img: mongodb },
+        {  img: express },
         {img: reactnative },
+        {img: tailwind },
         {img:django },
         { img:sql},
         {img: git},
@@ -38,7 +45,7 @@ const About = () => {
   return (
     <section ref={ref} id="about" className={styles.about}>
       {isInView && ( <> 
-      <h2>About Me</h2>
+      <h2>Skills</h2>
       <p>I am a passionate developer with experience in React, Django, and more.</p>
 
      

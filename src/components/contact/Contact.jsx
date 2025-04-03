@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import styles from "./Contact.module.css";
-import { FaEnvelope, FaLinkedin, FaGithub,FaWhatsapp,FaPhone } from "react-icons/fa";
+import { FaEnvelope, FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 const Contact = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { triggerOnce: true, threshold: 0.2 });
@@ -45,26 +45,17 @@ const Contact = () => {
         </motion.a>
 
         <motion.a
-  href="https://wa.me/+9779804414195"
+  href="https://www.instagram.com/chandu1234908?igsh=MXRpa2lwbHQyZzR5aw=="
   className={styles.contactItem}
   target="_blank"
   rel="noopener noreferrer"
   whileHover={{ scale: 1.1 }}
   whileTap={{ scale: 0.95 }}
 >
-  <FaWhatsapp className={styles.icon} /> WhatsApp +9779804414195
+  <FaInstagram className={styles.icon} /> Instagram @Chandankohar
 </motion.a>
 
-<motion.a
-  href="tel:8543014351"
-  className={styles.contactItem}
-  target="_blank"
-  rel="noopener noreferrer"
-  whileHover={{ scale: 1.1 }}
-  whileTap={{ scale: 0.95 }}
->
-  <FaPhone className={styles.icon} /> Call Now 8543014351
-</motion.a>
+
       </div>
       </>)}
     </section>

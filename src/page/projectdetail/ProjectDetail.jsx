@@ -35,6 +35,8 @@ const ProjectDetail = () => {
       <img src={project.image} alt={project.title} className={styles.image} />
       <div className={styles.content}>
         <h2 className={styles.title}>{project.title}</h2>
+        <h2 className={styles.title1}>{project.technology}</h2>
+        <h2 className={styles.title1}>{project.date}</h2>
         <p><strong>Objective:</strong> {project.objective}</p>
         <p><strong>Description:</strong> {project.description}</p>
 
