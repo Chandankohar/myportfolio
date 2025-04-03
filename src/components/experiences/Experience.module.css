@@ -1,0 +1,90 @@
+.experienceSection {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #0908089c;
+    background-image: url('../../static/image/experiencebg.avif');
+    background-blend-mode: overlay;
+    overflow: hidden;
+    background-size:contain;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0px 20px 15px rgba(5, 7, 47, 0.801));
+    animation: zoomEffect 5s infinite alternate ease-in-out;
+    
+}
+@keyframes zoomEffect {
+    0% {
+        background-size: 50%;
+    }
+    100% {
+        background-size: 53%;
+    }
+}
+
+.title {
+    text-align: end;
+    margin-right: 15%;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.experienceList {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 20px;
+}
+
+.experienceCard {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 600px;
+}
+
+.experienceCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.icon {
+    font-size: 2rem;
+    color: #ff5733;
+}
+
+.experienceCard h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.experienceCard span {
+    font-weight: bold;
+}
+
+.duration {
+    font-size: 1rem;
+    color: #555;
+}
+
+.tech {
+    font-size: 1rem;
+    margin-top: 5px;
+    color: #777;
+}
+
+.experienceCard ul {
+    padding-left: 20px;
+    margin-top: 5px;
+    font-size: 0.95rem;
+    color: #444;
+
+}
+
+.experienceCard ul li {
+    margin-bottom: 5px;
+text-align: left;
+}

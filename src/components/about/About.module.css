@@ -1,0 +1,130 @@
+.about {
+    padding: 50px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    background-image: url('../../static/image/aboutusbg.jpg');
+    background-blend-mode: overlay;
+    overflow: hidden;
+
+  }
+  
+
+  .skillsSection {
+    justify-self: left; 
+    text-align: center;
+    padding: 0px 20px;
+
+}
+
+.skillsSection h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.skillsGrid {
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.skill {
+    justify-self: left;
+    background: white;
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+
+.skill img {
+    border-radius: 10px;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+   
+}
+
+.skill p {
+    
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: blue;
+}
+
+.skill:hover {
+    transform: translateY(-2px) scale(1.05); /* Moves slightly & enlarges */
+   
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.7);
+}
+
+.icon {
+    display: inline-block;
+}
+
+
+
+
+.educationSection {
+    text-align: center;
+    padding: 0px 20px;
+    
+}
+
+.title {
+    text-align: start;
+margin-left: 25%;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.educationList {
+    justify-self: left;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.educationCard {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.educationCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+}
+
+.icon {
+    font-size: 2rem;
+    color: #ff5733;
+}
+
+.educationCard h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.educationCard p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.educationCard span {
+    font-size: 0.9rem;
+    color: #777;
+}

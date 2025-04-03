@@ -1,0 +1,32 @@
+.navbar {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 20px;
+    background: #222;
+    color: white;
+    
+  }
+
+  .logo{
+    justify-self: start;
+    align-self: center;
+    font-weight: bold;
+  }
+  
+  .navLinks {
+    justify-self: start;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+  }
+  
+  .navLinks li {
+    margin: 0 15px;
+  }
+  
+  .navLinks a {
+    color: white;
+    text-decoration: none;
+  }
+  
